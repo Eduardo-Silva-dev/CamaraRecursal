@@ -6,7 +6,6 @@
 -- Tempo de geração: 21-Jan-2020 às 19:28
 -- Versão do servidor: 10.3.16-MariaDB
 -- versão do PHP: 7.2.20
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -33,6 +32,8 @@ CREATE TABLE usuarios (
   camara int(1) not null,
   primary key (id_usuarios,usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into usuarios(nome,usuario,email,senha) values('admin','admin','admin@admin.com','d033e22ae348aeb5660fc2140aec35850c4da997',0);
 
 create table processos (
   id_processos int(11) NOT NULL auto_increment,
